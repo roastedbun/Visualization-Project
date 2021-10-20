@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "params": [
+    {
+      "name" : "zoom_level" ,
+      "value" : 200,
+      "bind": {"input": "range",
+      
+      "min": 100, 
+      "max": 600, 
+      "step": 10, 
+      "name": "Zoom: "
+      }},
+      {
+        "name": "center_to",
+        "value": [0, 90],
+        "bind": { 
+        "input": "select", 
+        "options": [
+            [40, 55.50], 
+            [140, 71.20], 
+            [144.7, -5.77],
+            [90, 91.1],
+            [-109, 105],
+            [-51, 11]
+        ],
+        "labels": ["Africa", "Asia", "Australia", "Europe", "North America", "South America"], 
+        "name": "Map Centre: "
+      }}
+  ],
+  
+  "data" : {
+    "url": "https://raw.githubusercontent.com/roastedbun/Visualization-Project/main/Airplane%20Crashes%20Clean.csv"
+  },
+  
+  "vconcat": [{
+    "width" : 1000 ,
+    "height" : 625,
+    "projection" : {
+      "type": "equalEarth",
+      "scale": {"expr": "zoom_level"},
+      "center": {"expr": "center_to"} 
+    },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/roastedbun/Visualization-Project/main/countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "transform": [{"filter": {"param": "time_brush"}}], 
+       "encoding": {
+         "longitude": {"field": "lngCrashLoc", "type": "quantitative"}, 
+         "latitude": {"field": "latCrashLoc", "type": "quantitative"}, 
+         "color": { 
+            "value" : "#911a24"
+          },
+          "size": {
+        "field": "fatalities",
+        "type": "quantitative",
+        "scale" :{"rangeMin" : 10}
+      },
+          "tooltip" : [
+            {"field" : "date", "title" : "Date"},
+            {"field" : "location", "title" : "Location of Crash"},
+            {"field" : "fatalities", "title": "Number of Fatalities"},
+            {"field" : "deathrate", "title" : "% dead"},
+            {"field": "summary", "title" : "Crash Summary"}
+          ]
+        },
+      "layer": [
+        {"mark" : {
+          "type": "circle",
+          "opacity" : 0.6
+        }}
+      ]}
+    ]
+  },
+  {
+    "params": [
+      {
+      "name": "time_brush",
+      "select": {"type": "interval", "encodings": ["x"]} 
+      }
+    ],
+    "width" : 1000,
+    "height" : 200,
+    "mark" : "line",
+    
+    "encoding": {
+      "x" : {
+        "field" : "year",
+        "timeUnit" : "yearmonthdate",
+        "axis": {"title": "Time"}
+      },
+      "y":{
+        "aggregate": "count", 
+        "title" : "Number of Crashes",
+        "axis" : {"tickCount" : 10}},
+        "color" : {
+          "value" : "#911a24"
+        }
+    }
+  }
+  ]
+
+}
+
+
+
