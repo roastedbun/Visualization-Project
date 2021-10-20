@@ -13,7 +13,7 @@
 h3 {
 	width: 100%;
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 #lesser_graph {
@@ -25,13 +25,11 @@ h3 {
 #bar_chart {
 	float: left;
 	width: 500px;
-	margin-left: 150px;
-	margin-top: 150px;
+	margin: 150px;
 }
 
 #line_chart {
 	float: right;
 	width: 500px;
-	margin-left: 150px;
-	margin-top: 150px;
+	margin: 150px;
 }
