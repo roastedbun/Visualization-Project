@@ -41,6 +41,7 @@
 
   <div id="bar_chart">
 
+    <h4>The number of accidents that happen depends on category of crash</h4>
     <script type="text/javascript">
       var spec2 = "bar_chart.vega";
       vegaEmbed('#bar_chart', spec2).then(function(result) {
@@ -50,6 +51,17 @@
   
   </div>
 
+  <div id="line_chart">
+
+    <h4>The number of accidents that happen depends on category of crash</h3>
+    <script type="text/javascript">
+      var spec2 = "line_chart.vega";
+      vegaEmbed('#line_chart', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+  
+  </div>
 </div>
 
 </body>

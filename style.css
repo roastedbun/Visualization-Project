@@ -21,8 +21,15 @@ h3 {
 	width: 100%;
 	text-align: center;
 }
+
 #bar_chart {
 	float: left;
+	width: 500px;
+	margin: 150px;
+}
+
+#line_chart {
+	float: right;
 	width: 500px;
 	margin: 150px;
 }

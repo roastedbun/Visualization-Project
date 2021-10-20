@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Bar chart",
+    "title" : "Fatalities by Year",
+    "data": {
+      "url": "https://raw.githubusercontent.com/roastedbun/Visualization-Project/main/Airplane%20Crashes%20Clean.csv"
+    },
+    "width" : 400,
+    "height" : 250,
+    "mark" : "line",
+    "encoding": {
+      "x" : {
+        "field": "year", 
+        "type": "temporal",   
+        "axis": {"labelFontSize": 10}},
+        "y" : {
+          "field" : "fatalities",
+          "aggregate": "sum", 
+          "title" : "Number of Fatalities"
+        },
+          "color" : {
+            "value" : "#911a24"
+        }
+    }
+}
