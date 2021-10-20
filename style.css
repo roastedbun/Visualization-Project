@@ -1,3 +1,7 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+
 #MainMap {
 	top:50px;
 	width: 100%;
