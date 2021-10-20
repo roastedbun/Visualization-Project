@@ -12,7 +12,9 @@
   
 </head>
 <body>
-  
+<h2>A Visualization of Airplane Crash Accidents</h2>
+
+<h4>Plane Crashes Around the World</h3>
 <div id="MainMap">
 
   <script type="text/javascript">
@@ -23,8 +25,17 @@
   </script>
   
 </div>
+<h3>There are also survivors of plane crashes...</h3>
+<div id="SurvivorMap">
 
-
+  <script type="text/javascript">
+    var spec2 = "SurvivorMap.vega";
+    vegaEmbed('#SurvivorMap', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+  
+</div>
 
 </body>
 </html>
