@@ -38,30 +38,35 @@
 </div>
 
 <div id="lesser_graph">
-  
-  <div id="bar_chart">
+  <div id="left">
   <h3>The number of accidents that happen depends on category of crash</h3>
-    
+  <div id="bar_chart">
+
     <script type="text/javascript">
-      var spec2 = "bar_chart.vega";
-      vegaEmbed('#bar_chart', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
+    var spec2 = "bar_chart.vega";
+    vegaEmbed('#bar_chart', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
     </script>
-  
+
   </div>
-  
-  <div id="line_chart">
-  <h3>There is a trend in the number of fatalities and year</h3>
+
+  </div>
     
-    <script type="text/javascript">
+  <div id="right">
+    <h3>There is a trend in the number of fatalities and year</h3>
+    <div id="line_chart">
+    
+      <script type="text/javascript">
       var spec2 = "line_chart.vega";
       vegaEmbed('#line_chart', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
-    </script>
-  
+      </script>
+    
+    </div>
   </div>
+  
 </div>
 
 </body>
