@@ -34,7 +34,7 @@
   },
   
   "vconcat": [{
-    "width" : "container" ,
+    "width" : 1000 ,
     "height" : 625,
     "projection" : {
       "type": "equalEarth",
@@ -85,7 +85,7 @@
       "select": {"type": "interval", "encodings": ["x"]} 
       }
     ],
-    "width" : "container",
+    "width" : 1000,
     "height" : 200,
     "mark" : "line",
     
