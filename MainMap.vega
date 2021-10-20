@@ -35,7 +35,7 @@
   
   "vconcat": [{
     "width" : 1000 ,
-    "height" : 625,
+    "height" : 525,
     "projection" : {
       "type": "equalEarth",
       "scale": {"expr": "zoom_level"},
