@@ -1,11 +1,11 @@
 #MainMap {
-	top:20px;
+	top:50px;
 	width: 100%;
 	text-align: center;
 }
 
 #SurvivorMap {
-	top:20px;
+	top:50px;
 	width: 100%;
 	text-align: center;
 }
@@ -13,5 +13,15 @@
 h3 {
 	width: 100%;
 	text-align: center;
-	margin-top: 90px;
+	padding-top: 20px;
+}
+
+#lesser_graph {
+	top:50px;
+	width: 100%;
+	text-align: center;
+}
+#bar_chart {
+	float: left;
+	width: 500px;
 }
