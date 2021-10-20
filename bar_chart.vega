@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Bar chart",
+    "title" : "Accident Categories",
+    "data": {
+      "url": "https://raw.githubusercontent.com/roastedbun/Visualization-Project/main/Airplane%20Crashes%20Category.csv"
+    },
+    "width" : 400,
+    "height" : 250,
+    "mark" : "bar",
+    "encoding": {
+      "x" : {
+        "field": "category", 
+        "type": "nominal",   
+        "axis": {"labelFontSize": 10}},
+        "y" : {
+          "field" : "category",
+          "aggregate": "count", 
+          "title" : "Number of Accidents"
+        },
+          "color" : {
+            "value" : "#911a24"
+        }
+    }
+}
