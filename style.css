@@ -37,14 +37,14 @@ h3 {
 	text-align: center;
 }
 
-#bar_chart {
+#left {
 	float: left;
 	width: 500px;
 	margin-top: 150px;
 	margin-left: 150px;
 }
 
-#line_chart {
+#right {
 	float: right;
 	width: 500px;
 	margin-top: 150px;
